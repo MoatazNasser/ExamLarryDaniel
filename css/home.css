@@ -1,7 +1,10 @@
 * {
   border: 0px;
   padding: 0px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 h1,
@@ -51,6 +54,8 @@ h6 {
   width: 100%;
   height: 2px;
   background-color: var(--text-title-maintheme);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -104,9 +109,12 @@ h6 {
   margin: auto;
   border-radius: 5px;
   padding: 0;
+  -webkit-box-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.291);
   box-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.291);
 }
 .w-fit {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 .progress-bar {
@@ -139,6 +147,8 @@ h6 {
 /* -------------Services--------------------- */
 .underlineDots {
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .underlineDots::before {
@@ -161,12 +171,16 @@ h6 {
 }
 .logo {
   font-size: 25px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .logoContainer {
   width: 70px;
   height: 70px;
   /* border: 5px solid #0d6efd; */
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .serviceBox:hover .logoContainer {
@@ -193,8 +207,11 @@ h6 {
 }
 
 .count_1 {
+  -webkit-animation: counter1 5s ease-in-out;
   animation: counter1 5s ease-in-out;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   counter-reset: number var(--number);
 }
@@ -204,7 +221,9 @@ h6 {
 }
 
 .count_2 {
+  -webkit-animation: counter2 5s ease-in-out;
   animation: counter2 5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   counter-reset: number var(--number);
 }
@@ -214,7 +233,9 @@ h6 {
 }
 
 .count_3 {
+  -webkit-animation: counter3 5s ease-in-out;
   animation: counter3 5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   counter-reset: number var(--number);
 }
@@ -224,13 +245,29 @@ h6 {
 }
 
 .count_4 {
+  -webkit-animation: counter4 5s ease-in-out;
   animation: counter4 5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   counter-reset: number var(--number);
 }
 
 .count_4::after {
   content: counter(number);
+}
+
+@-webkit-keyframes counter1 {
+  0% {
+    --number: 0;
+  }
+
+  10% {
+    --number: 0;
+  }
+
+  100% {
+    --number: 850;
+  }
 }
 
 @keyframes counter1 {
@@ -244,6 +281,20 @@ h6 {
 
   100% {
     --number: 850;
+  }
+}
+
+@-webkit-keyframes counter2 {
+  0% {
+    --number: 0;
+  }
+
+  10% {
+    --number: 0;
+  }
+
+  100% {
+    --number: 230;
   }
 }
 
@@ -261,6 +312,20 @@ h6 {
   }
 }
 
+@-webkit-keyframes counter3 {
+  0% {
+    --number: 0;
+  }
+
+  10% {
+    --number: 0;
+  }
+
+  100% {
+    --number: 9450;
+  }
+}
+
 @keyframes counter3 {
   0% {
     --number: 0;
@@ -272,6 +337,20 @@ h6 {
 
   100% {
     --number: 9450;
+  }
+}
+
+@-webkit-keyframes counter4 {
+  0% {
+    --number: 0;
+  }
+
+  10% {
+    --number: 0;
+  }
+
+  100% {
+    --number: 780;
   }
 }
 
@@ -319,12 +398,18 @@ h6 {
   font-size: 18px;
   color: white;
 
+  -webkit-transition: all 0.5s;
+
+  -o-transition: all 0.5s;
+
   transition: all 0.5s;
 }
 .logoContainerP {
   width: 35px;
   height: 35px;
   background-color: var(--text-title-maintheme);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .logoContainerP:hover {
@@ -343,10 +428,16 @@ h6 {
 .picc img {
   float: left;
   width: 100%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 .picc:hover img {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
@@ -354,6 +445,7 @@ h6 {
   margin-bottom: 20px;
 }
 .my-shadow {
+  -webkit-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
   box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
 }
 /* --------testimonials--------- */
@@ -431,8 +523,15 @@ textarea:focus button:focus {
     background-color: rgba(128, 128, 128, 0.232);
   }
   .ul-lg-Edit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .nav-item {
@@ -450,5 +549,18 @@ textarea:focus button:focus {
   .about-img-dots::before {
     bottom: -1%;
     left: -6%;
+  }
+  /* ---------contact us------------ */
+  .last-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
